@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồ án LTGDWEB</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="./main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+   </head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <div class="container-fluid">
+    <div class="web">
+        <div class="header">
+            <div class="a456">
+                <img class="logo-web" src="./img/logo.png" >
+            </div>
+            <div class="menu1">
+                    <i class="bi bi-house-fill home"id="refreshIcon"></i>
+                    <div class="menu1-text1">SOCCER</div>
+                    <div class="menu1-text1">NBA</div>
+                    <div class="menu1-text1">NFL</div>
+                    <div class="menu1-text1">MLB</div>
+                    <div class="menu1-text1">VOLLEYBALL</div>
+                    <div class="menu1-text1">BOXING</div>
+                    <div class="menu1-text1">TENNIS</div>
+                    <div class="menu1-text1">GOLF</div>
+                    <div class="menu1-text1">MORE <i class="bi bi-caret-down-fill"></i></div>
+            </div>
+            <div class="Thanhsearch">
+                    <div class="input-group Thanhsearch1">
+                        <input type="search" class="form-control rounded " placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <button type="button" class="btn btn-outline-primary "><i class="bi bi-search"></i>
+                        </button>
+                      </div>  
+            </div>
+            <div class="menu2">
+                <span id="clock"></span>
+                <div class="menu-container">
+                    <div class="menu1-text2" onclick="showCountries()">
+                      <span id="selectedCountry">VNM</span>
+                      <img id="selectedCountryImage" class="laco" src="./img/co7.webp">
+                    </div>
+                    <div id="countryTable" class="hidden">
+                      <div class="menu1-text21" onclick="selectCountry(event)">
+                        <span>USA</span>
+                        <img onclick="event.stopPropagation()" class="laco" src="./img/co4.svg">
+                      </div>
+                      <div class="menu1-text21" onclick="selectCountry(event)">
+                        <span>ENG</span>
+                        <img onclick="event.stopPropagation()" class="laco" src="./img/co6.jpg">
+                      </div>
+                      <div class="menu1-text21" onclick="selectCountry(event)">
+                        <span>AUS</span>
+                        <img onclick="event.stopPropagation()" class="laco" src="./img/co3.png">
+                      </div>
+                      <div class="menu1-text21" onclick="selectCountry(event)">
+                        <span>BRA</span>
+                        <img onclick="event.stopPropagation()" class="laco" src="./img/co1.png">
+                      </div>
+                      <div class="menu1-text21" onclick="selectCountry(event)">
+                        <span>CHN</span>
+                        <img onclick="event.stopPropagation()" class="laco" src="./img/co2.webp">
+                      </div>
+                      <div class="menu1-text21" onclick="selectCountry(event)">
+                        <span>JPN</span>
+                        <img onclick="event.stopPropagation()" class="laco" src="./img/co5.webp">
+                      </div>
+                    </div>
+                  </div>
+                  <i class="bi bi-caret-down-fill muitennuoc"></i>   
+            </div>
+        </div>  
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/tt1.jpg" class="d-block w-100 a124" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>Brooks Koepka: Nghệ thuật chiến thắng trên sân golf.</h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./img/tt2.jpg" class="d-block w-100 a124" alt="...">
+                <div class="carousel-caption d-none d-md-block">    
+                  <h3>Tuyển Việt Nam: HLV Troussier gặp khó giữa ngã ba đường</h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./img/tt3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>Nóng nhất thể thao tối 23/5: McGregor muốn đấu nhà vô địch boxing để kiếm bộn tiền.</h3>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <!--lay 2-->
+        <div class="Thanhhchaytin">
+            <div class="marquee">
+                <ul class="marquee-content">
+                    <li class="special">(BÓNG ĐÁ⚽)</li>
+                    <li>Sao Newcastle chơi xấu vẫn thoát thẻ đỏ, fan bức xúc vì VAR ngó lơ</li>
+                    <li>Biến căng sao Real Madrid bị phân biệt chủng tộc, 6 "vua áo đen" mất việc</li>
+                    <li>Báo Tây Ban Nha lo Barca tái đấu "ác mộng" Bayern ở Cúp C1 mùa sau</li>
+                    <li>Báo Anh khuyên MU nâng cấp 4 vị trí nếu muốn lật đổ Man City</li>
+                    <li>Sao Newcastle chơi xấu vẫn thoát thẻ đỏ, fan bức xúc vì VAR ngó lơ</li>
+                    <li>Biến căng sao Real Madrid bị phân biệt chủng tộc, 6 "vua áo đen" mất việc</li>
+                    <li>Báo Tây Ban Nha lo Barca tái đấu "ác mộng" Bayern ở Cúp C1 mùa sau</li>
+                    <li>Báo Anh khuyên MU nâng cấp 4 vị trí nếu muốn lật đổ Man City</li>
+                    <li>MU bất ngờ đàm phán đón Neymar từ PSG, nhờ Casemiro làm "thuyết khách"</li>
+                    <li>MU sáng cửa top 3 Ngoại hạng Anh, thấp thỏm tránh "bảng tử thần" cúp C1s</li>
+                    <li>Lịch thi đấu Vòng 36 Bundesliga</li>
+                    <li>Stuttgart - Hoffenheim(20:30 27/05)</li>
+                    <li>Bochum - Bayer Leverkusen(20:30 27/05)</li>
+                    <li>Wolfsburg - Hertha BSC(20:30 27/05)</li>
+                    <li>Eintracht Frankfurt - Freiburg(20:30 27/05)</li>
+                    <li>M'gladbach - Augsburg(20:30 27/05)</li>
+                    <li>Köln - Bayern München(20:30 27/05)</li>
+                    <li>Union Berlin - Werder Bremen(20:30 27/05)</li>
+                    <li>RB Leipzig - Schalke 04(20:30 27/05)</li>
+                    <li>Borussia Dortmund - Mainz 05(20:30 27/05)</li>
+                    <li>Lịch Thi đấu vòng 36 NHA(EPL)</li>  
+                    <li>Southampton - Liverpool(22:30 28/05)</li>
+                    <li>Manchester United - Fulham(22:30 28/05)</li>
+                    <li>Leicester City - West Ham United(22:30 28/05)</li>
+                    <li>Leeds United - Tottenham Hotspur(22:30 28/05)</li>
+                    <li>Everton - Bournemouth(22:30 28/05)</li>
+                    <li>Crystal Palace - Nottingham Forest(22:30 28/05)</li>
+                    <li>Chelsea - Newcastle United(22:30 28/05)</li>
+                    <li>Brentford - Manchester City(22:30 28/05)</li>
+                    <li>Aston Villa - Brighton(22:30 28/05)</li>
+                    <li>Arsenal - Wolverhampton(22:30 28/05)</li>  
+                    <li class="special">(BÓNG RỔ🏀)</li> 
+                    <li>Từ chối 40 điểm của LeBron James, Nikola Jokic cùng Denver Nuggets tiến vào NBA Finals 2023</li> 
+                    <li>Giải bóng rổ 3x3 Hanoi Open Cup 2023: Hàng trăm VĐV “cháy" hết mình dưới cái nóng Thủ Đô</li> 
+                    <li>Nóng: LeBron James nghiêm túc cân nhắc việc giải nghệ sau khi dừng bước ở chung kết miền Tây</li> 
+                    <li>Jayson Tatum tìm lại chính mình, Boston Celtics kéo dài chung kết Miền Đông thêm 1 trận</li> 
+                    <li>"Cỗ máy úp rổ" Alonzo Stafford | Mixtape VBA 2022</li> 
+                    <li>Chêm ngưỡng những pha bóng đẹp mắt nhất VBA Finals 2022</li> 
+                    <li>  Saigon Heat nhấn chìm Hanoi Buffaloes tại Game 3, lên ngôi vô địch VBA 2022</li> 
+                    <li>Tình huống hy hữu tại NBA Playoffs: Trọng tài đổ máu do va phải LeBron James</li> 
+                    <li class="special">(BÓNG CHUYỀN🏐)</li> 
+                    <li>Chia bảng bóng chuyền nữ Challenger Cup châu Á 2023: Việt Nam hóa tử thần</li> 
+                    <li>Thể thức thi đấu bóng chuyền nữ Challenger Cup châu Á 2023</li> 
+                    <li>Chia bảng VNL nữ 2023: Đại diện duy nhất của ĐNÁ vào bảng tử thần</li> 
+                    <li>16 đội bóng chuyền nam tham dự VNL 2023: ĐNÁ không có đại diện</li> 
+                    <li>Đỉnh cao Thanh Thúy đập bóng "đã mắt", ghi 28 điểm đấu bóng chuyền Thái Lan</li> 
+                    <li>ĐT bóng chuyền nữ Việt Nam ra biển lớn, Thanh Thúy chạm trán mỹ nhân 1m97</li> 
+                    <li class="special">(QUẦN VỢT🎾)</li>
+                    <li> Báo chí thế giới đồng loạt đưa tin tri ân như thể Rafael Nadal giải nghệ</li> 
+                    <li>Tuyệt kỹ trái một tay để đời: Federer số 1, Wawrinka xếp sau Henin</li> 
+                    <li>Kỳ tích “Vua đất nện” Nadal: 16 tuổi hạ gục nhà vô địch Roland Garros</li> 
+                    <li>Djokovic xuống hạng 3 thế giới, vinh danh Alcaraz - Medvedev (Bảng xếp hạng tennis 22/5)</li> 
+                    <li>Cổ động viên sợ Nadal theo "vết xe đổ" Federer, nuối tiếc cho Roland Garros</li> 
+                </ul>
+            </div>
+            <div class="Thanhhchaytin-1">Tin Tức Mới Nhất</div>   
+        </div>       
+        <div class= "ketquatrandau">
+            <div class="giaidau"tabindex="0">
+                <div class="tengiaidau">SOCCER ⚽ 
+                </div>
+                <div class="giaidau1 "tabindex="0"  >
+                    <div class="tengiaidau" onclick="navigateToHTML('NCAA.html')">NCAA🏈    </div>
+                    <div class="giaidau1"  tabindex="0">
+                    <div class="tengiaidau"onclick="navigateToHTML('MLB.html')">MLB⚾︎</div>
+                        <div class="giaidau1"tabindex="0">
+                            <div class="tengiaidau"onclick="navigateToHTML('NBA.html')">NBA🏀</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="giaidaua"  tabindex="0">
+                <div class="tengiaidau" id="categoryTitle">SOCCER   ▼
+                </div>
+                <div class="giaidau1-a" tabindex="0"  >
+                    <div class="tengiaidaua" onclick="showContent('EPL')">EPL</div>
+                <div class="giaidau1-a" tabindex="0" >
+                    <div class="tengiaidaua" onclick="showContent('LALIGA')">LALIGA</div>
+                <div class="giaidau1-a" tabindex="0" >
+                    <div class="tengiaidaua"Onclick="showContent('BUNDESLIGA')" >BUNDESLIGA</div>
+                    <div class="giaidau1-a" tabindex="0" >
+                        <div class="tengiaidaua"Onclick="showContent('SERI A')" >SERI A</div>
+                <div class="giaidau1-a" tabindex="0" >
+                    <div class="tengiaidaua"onclick="showContent('LEAGUE 1')" >LEAGUE 1</div>
+                </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            <div class="trandau">
+                <div class="trandau1 EPL">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/1.png">
+                        <div class="tendoi">Man City</div>
+                        <div class="ketqua">3</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/2.png">
+                        <div class="tendoi">Arsenal</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 EPL">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/3.png">
+                        <div class="tendoi">Newcastle</div>
+                        <div class="ketqua">2</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/4.png">
+                        <div class="tendoi">Man Utd</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 EPL">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/5.png">
+                        <div class="tendoi">liverpool</div>
+                        <div class="ketqua">5</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/6.png">
+                        <div class="tendoi">Brighton</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 EPL">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/7.png">
+                        <div class="tendoi">Aston Villa</div>
+                        <div class="ketqua">0</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/8.png">
+                        <div class="tendoi"> Tottenham</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 EPL">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/9.png">
+                        <div class="tendoi"> Brentford</div>
+                        <div class="ketqua">3</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/10.png">
+                        <div class="tendoi"> Fulham</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 EPL">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/11.png">
+                        <div class="tendoi">Chelsea</div>
+                        <div class="ketqua">3</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/12.png">
+                        <div class="tendoi">Crystal Palce</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 EPL">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/13.png">
+                        <div class="tendoi">Bournemouth</div>
+                        <div class="ketqua">5</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/14.png">
+                        <div class="tendoi">Nottingham</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 EPL">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/1.png">
+                        <div class="tendoi">Everton</div>
+                        <div class="ketqua">3</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/16.png">
+                        <div class="tendoi">Leiceste</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 EPL">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/17.png">
+                        <div class="tendoi">Leeds</div>
+                        <div class="ketqua">0</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/18.png">
+                        <div class="tendoi">Southampton</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 EPL">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/19.png">
+                        <div class="tendoi">West Ham</div>
+                        <div class="ketqua">3</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/20.png">
+                        <div class="tendoi">Chelsea</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <!-- laliga -->
+                <div class="trandau1 LALIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/21.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/22.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LALIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/23.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/24.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LALIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/25.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/26.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LALIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/27.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/28.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LALIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/29.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/30.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LALIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/31.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/32.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LALIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/33.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/34.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LALIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/1.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/36.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LALIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/37.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/38.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LALIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/39.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/40.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <!-- duc -->
+                <div class="trandau1 BUNDESLIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/41.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/42.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 BUNDESLIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/43.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/44.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 BUNDESLIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/45.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/46.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 BUNDESLIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/47.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/48.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 BUNDESLIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/49.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/50.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 BUNDESLIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/51.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/52.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 BUNDESLIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/53.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/54.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 BUNDESLIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/55.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/56.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 BUNDESLIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/57.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/58.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 BUNDESLIGA">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/59.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/60.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <!-- ys -->
+                <div class="trandau1 SERI A">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/61.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/62.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 SERI A">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/63.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/64.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 SERI A ">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/65.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/66.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 SERI A">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/67.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/68.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 SERI A">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/69.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/70.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 SERI A">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/71.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/72.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 SERI A">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/73.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/74.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 SERI A">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/75.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/76.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 SERI A">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/77.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/78.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 SERI A">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/79.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/80.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <!-- phap -->
+                <div class="trandau1 LEAGUE 1">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/81.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/82.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LEAGUE 1">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/83.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/84.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LEAGUE 1">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/85.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/86.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LEAGUE 1">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/87.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/88.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LEAGUE 1">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/89.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/90.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LEAGUE 1">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/91.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/92.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LEAGUE 1">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/93.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/94.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LEAGUE 1">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/95.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/96.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LEAGUE 1">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/97.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/98.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+                <div class="trandau1 LEAGUE 1">
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/99.png">
+                        <div class="tendoi">Texas</div>
+                        <div class="ketqua">1</div>
+                    </div>
+                    <div class="doi1">
+                        <img class="anhdoi" src="./img/100.png">
+                        <div class="tendoi">Texas Tech</div>
+                        <div class="ketqua">1</div>   
+                    </div>
+                    <div class="thoigian">Sat, 6:30PM</div>
+                </div>
+
+            </div>
+        </div>
+        <!--lay 3-->
+        <div class="boxtinchinh">
+            <img  class="anh-boxtinchinh" src="./img/main.webp">
+                <div class="noidungtin">
+                    <div class="noidung">
+                        <div class="logo-boxtinchinh">SOOCER</div>
+                        <div class="tieudetin">Bán kết lượt về C1: Man City vs Real Madrid - 
+                                Bây giờ hoặc là không bao giờ</div>
+                        <div class="tacgia">by Benl - 11hrs ago</div>
+                        <div class="tacgia-1">   
+                            Thầy trò Pep Guardiola đang có lợi thế lớn hơn trong trận lượt 
+                            về vòng bán kết của C1 khi đối đầu với Real Madrid –
+                            Nhà vua của chiếc cúp C1 danh giá. Liệu ở cuộc đối đầu vào rạng
+                            sáng 18/5, đội bóng màu xanh thành Man có thể tận dụng cơ hội để biến Kền kền 
+                            trắng thành cựu vương hay không?.</div>
+                        <div class="mangxh">
+                             <div class="mangxh-1">
+                                <div class="mangxh-2"><i class="bi bi-facebook"></i></div>
+                                <div class="mangxh-2"><i class="bi bi-youtube"></i></div>
+                                <div class="mangxh-2"><i class="bi bi-instagram"></i></div>
+                                <div class="mangxh-2"><i class="bi bi-twitter"></i></div>
+                            </div> 
+                        </div>
+                    </div>
+                    <a href="https://thethao247.vn/72-ban-ket-luot-ve-c1-man-city-vs-real-madrid-bay-gio-hoac-la-khong-bao-gio-d286972.html" target="_blank">
+                                    <div class="nhanvao">VIEW MORE</div>
+                    </a>
+                </div> 
+        </div>
+                <!--lay 4-->
+        <div class="boxtinchinh2">
+            <div class="Thanhsearch-a">
+                <div class="input-group Thanhsearch1-a">
+                    <input type="search" class="form-control rounded " placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <button type="button" class="btn btn-outline-primary "><i class="bi bi-search"></i>  </button>
+                </div>  
+            </div>
+            <div class="noidungtinchinh2">
+                <div class="tinlienquan">RELATED NEWS</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i> BXH FIFA tháng 12/2022: Argentina nhảy vọt, Việt Nam vẫn hạng 96</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i> Messi gia hạn PSG: Sau World Cup là Champions League</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i> FIFA bỏ GOAT với Messi vì gây tranh cãi với Ronaldo</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i> Messi diễu hành ăn mừng trên xe buýt mui trần</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i> Premier League vừa công bố ứng cử viên giành danh hiệu 'HLV xuất sắc nhất mùa giải</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i> Toàn đội Real đồng lòng muốn Ancelotti ở lại</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Sao trẻ từng được đánh giá giỏi hơn Rashford, rơi vào cảnh thất nghiệp</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>NÓNG! Arsenal chuẩn bị công bố bản hợp đồng đình đám</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>M.U chốt giá 40 triệu, Newcastle có câu trả lời cho McTominay</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Điểm tương đồng giữa Inter với các nhà vô địch Champions League</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Man Utd dẫn đầu ký tiền đạo chất lượng, mức giá đắt kỷ lục</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>LĐBĐ Thái Lan mở cuộc điều tra về vụ hỗn chiến ở trận tranh HCV SEA Games 32</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Người hùng Man City lên tiếng chuyện tương lai sau mùa giải 2022/23</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Vì sao Garnacho lựa chọn ĐT Argentina thay vì Tây Ban Nha?</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Man United gửi đề nghị cho Adrien Rabiot</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Hình ảnh khiến Real Madrid phải xấu hổ trước Man City</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Jurgen Klopp xác nhận 4 cầu thủ chia tay Liverpool ở Hè 2023</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>CLB Luton lên tiếng xin lỗi Amad Diallo</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Messi nhận được hợp đồng 500 triệu Euro từ Saudi Arabia</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Sếp lớn Thái Lan xin từ chức sau cuộc ẩu đả tại chung kết SEA Games 32</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Bernardo Silva là ông vua vòng knock-out C1</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Erling Haaland đen đủi thế nào trước Real Madrid? </div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>U22 Việt Nam nhận phần thưởng bất ngờ sau tấm HCĐ SEA Games 32</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>CLB Viettel ra mắt đồng đội cũ của Mohamed Salah</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Indonesia lên kế hoạch ăn mừng hoàng tráng cho tấm HCV SEA Games 32</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>U17 Việt Nam xuất ngoại rèn quân trước thềm U17 châu Á 2023</div>
+                    <div class="noidungtinlienquan"><i class="bi bi-caret-right-fill red"></i>Vòng loại bóng đá nữ Olympic 2024: Việt Nam dễ thở, người Thái vào bảng tử thần</div>  
+            </div>
+                <div class="nhanvao-tinchinh2">MORE RELATED NEWS</div>
+        </div>
+        <!--lay 5-->
+        <div class="boxtinchinh3">
+            <div class="tieude-boxtinchinh3">LATEST NEW</div>
+            <div class="noidungtinchinh3">
+                <div class="noidungtinchinh3-1">
+                    <img class="anhnoidungchinh3" src="./img/a.jpg">
+                    <div class="logo-noidungchiinh3">GOLF</div>
+                    <div class="text-noidungchinh3">2hrs ago</div>
+                    <div class="textnoidungchinh31">Gareth Bale trải nghiệm những tuần tuyệt vời tại PGA Tour</div>
+                </div>
+                <div class="noidungtinchinh3-1">
+                    <img class="anhnoidungchinh3" src="./img/a1.jpg">
+                    <div class="logo-noidungchiinh3">NBA</div>
+                    <div class="text-noidungchinh3">10hrs ago</div>
+                    <div class="textnoidungchinh31">Giẫm lên ngực đối phương, Draymond Green bị NBA treo giò vì hành vi phi thể thao</div>
+                </div>
+                <div class="noidungtinchinh3-1">
+                    <img class="anhnoidungchinh3" src="./img/a2.jpg">
+                    <div class="logo-noidungchiinh3">BOXING</div>
+                    <div class="text-noidungchinh3">5hrs ago</div>
+                    <div class="textnoidungchinh31">Vé mua lại trận Gervonta Davis vs Ryan Garcia vượt mức 1 tỷ đồng</div>
+                </div>
+                <div class="noidungtinchinh3-1">
+                    <img class="anhnoidungchinh3" src="./img/a4.jpg">
+                    <div class="logo-noidungchiinh3">SOOCER</div>
+                    <div class="text-noidungchinh3">1hrs ago</div>
+                    <div class="textnoidungchinh31">Họp báo MU - Sevilla: Ten Hag khen De Gea toàn diện, Eriksen dè chừng đối thủ (Europa League)</div>
+                </div>
+                <div class="noidungtinchinh3-1">
+                    <img class="anhnoidungchinh3" src="./img/a5.jpg">
+                    <div class="logo-noidungchiinh3">SOOCER</div>
+                    <div class="text-noidungchinh3">4hrs ago</div>
+                    <div class="textnoidungchinh31">Thử thách lớn cho bóng đá Việt Nam tại SEA Games 32</div>
+                </div>
+            </div>
+            <div class="nhanvao-noidungchinh3">MORE LATEST NEWS</div>
+        </div>  
+        <!--lay6-->
+        <div class="noidunngtinchinh4">
+            <div class="boxnoidungchinh4">
+                <div class="tieude-noidungchinh4">GOFL ⛳  <i class="bi bi-caret-right-fill "></i></div>
+                <div class="text-noidungchinh4">
+                    <img class="anhtext-noidungchinh4" src="./img/c1.jpg">
+                    <div class="menu1-text1-noidungchinh4">
+                        <div class="thoigian-noidungchinh4">4 hrs ago
+                            <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> US Open 2023 ghi nhận lượng golfer kỷ lục đánh từ vòng loại</div>
+                        </div>
+                        <div class="thoigian-noidungchinh4">10 hrs ago
+                            <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Fitzpatrick toại nguyện với thắng lợi trên PGA Tour</div>
+                        </div>
+                        <div class="thoigian-noidungchinh4">7 hrs ago
+                            <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Khởi tranh giải golf nữ thế giới Hanwha LIFEPLUS International Crown</div>
+                        </div>
+                        <div class="thoigian-noidungchinh4">9 hrs ago
+                            <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Golfer Zimbabwe vô địch International Series Vietnam</div>
+                        </div>
+                        <div class="thoigian-noidungchinh4">8 hrs ago
+                            <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Fitzpatrick mơ vô địch PGA Tour trên sân đấu yêu thích</div>
+                        </div>
+                        <div class="thoigian-noidungchinh4">4 hrs ago
+                            <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Golfer trong nước sạch bóng ở International Series Vietnam</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nhanvao-noidungchinh4">VIEW MORE</div>
+            </div>
+            <div class="boxnoidungchinh4">
+                <div class="tieude-noidungchinh4">NBA 🏀<i class="bi bi-caret-right-fill"></i></div>
+                <div class="text-noidungchinh4">
+                    <img class="anhtext-noidungchinh4" src="./img/c2.jpg">
+                    <div class="menu1-text1-noidungchinh4">
+                        <div class="thoigian-noidungchinh4">15 hrs ago
+                            <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Kép phụ rực sáng, Los Angeles Lakers "cướp" Game 1 khỏi tay Memphis Grizzlies</div>
+                        </div>
+                        <div class="thoigian-noidungchinh4">4 hrs ago
+                            <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> De’Aaron Fox rực cháy với 38 điểm giúp Kings đả bại Warriors trong game 1 đầy căng thẳng</div>
+                        </div>
+                        <div class="thoigian-noidungchinh4">7 hrs ago
+                            <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Chicago Bulls bị hai người cũ gieo sầu, gục ngã trước Miami Heat và chia tay NBA 2022-23</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">9 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Golden State Warriors dùng “chiến thuật Stephen Curry" cho Andrew Wiggins tại Playoffs</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">11 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> LeBron James vượt qua Stephen Curry, bán được nhiều áo đấu nhất nửa sau mùa giải</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">13 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Zach LaVine cùng Chicago Bulls hoàn tất màn ngược dòng </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="nhanvao-noidungchinh4">VIEW MORE</div>
+        </div>
+        <div class="boxnoidungchinh4">
+            <div class="tieude-noidungchinh4">VOLLEYBALL🏐 <i class="bi bi-caret-right-fill "></i></div>
+            <div class="text-noidungchinh4">
+                <img class="anhtext-noidungchinh4" src="./img/c4.jpg">
+                <div class="menu1-text1-noidungchinh4">
+                    <div class="thoigian-noidungchinh4">4 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> SEA Games 32: Bóng chuyền Việt Nam đụng độ Thái Lan từ vòng bảng</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">7 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Indonesia báo hung tin cho ĐNÁ: Đã đủ quân lực giành HCV SEA Games thứ 12</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">10 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Ngắm nữ thần bóng chuyền đẹp nhất SEA Games 32, không thua kém hoa hậu</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">12 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Sao bóng chuyền số 1 Đông Nam Á bỏ giấc mơ Hàn Quốc tập trung giành HCV SEA Games 32</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">17 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Nhà vô địch Thái Lan đặt mục tiêu Top 4 ở giải bóng chuyền Vô địch các CLB nữ châu Á 2023</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">20 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Hé lộ nguyên nhân cái chết của sao bóng chuyền 18 tuổi nhảy từ cửa sổ khách sạn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="nhanvao-noidungchinh4">VIEW MORE</div>
+        </div>
+        <div class="boxnoidungchinh4">
+            <div class="tieude-noidungchinh4">BOXING🥊 <i class="bi bi-caret-right-fill "></i></div>
+            <div class="text-noidungchinh4">
+                <img class="anhtext-noidungchinh4" src="./img/c5.jpg">
+                <div class="menu1-text1-noidungchinh4">
+                    <div class="thoigian-noidungchinh4">20 hrs ago
+                            <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Dmitry Bivol muốn hạ cân giành 4 đai Boxing từ Canelo Alvarez</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">17 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Nate Diaz và Jake Paul lên kèo đấu Boxing trong tháng 8</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">15 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Lỡ kèo Tyson Fury, Oleksandr Usyk phải bảo vệ đai trước Daniel Dubois</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">10 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> VSP Pro 3: Những điệu "tango" tỏa sáng trên sàn Boxing chuyên nghiệp</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">4 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Boxing chuyên nghiệp VSP Pro 3: Thượng đài nảy lửa</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">2 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Đội ngũ võ sĩ trẻ nghiên cứu về Boxing nhà nghề tại buổi cân kí VSP Pro 3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="nhanvao-noidungchinh4">VIEW MORE</div>
+        </div>
+        <div class="boxnoidungchinh4">
+            <div class="tieude-noidungchinh4">SOOCER ⚽<i class="bi bi-caret-right-fill "></i></div>
+            <div class="text-noidungchinh4">
+                <img class="anhtext-noidungchinh4" src="./img/c6.png">
+                <div class="menu1-text1-noidungchinh4">
+                    <div class="thoigian-noidungchinh4">4 hrs ago
+                            <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Sau cú sốc Saliba, Arteta báo thêm tin xấu về Zinchenko</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">7 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Mikel Arteta nhắn gửi điều then chốt đến các học trò</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">9 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Ten Hag và Roy Keane đã mang đến lời cảnh báo cho Antony</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">11 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Mục tiêu Man United bị nhận xét không cần thiết với Liverpool</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">15 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Nơi lưu trú của U22 Việt Nam tại SEA Games 32 có gì đặc biệt</div>
+                    </div>
+                    <div class="thoigian-noidungchinh4">22 hrs ago
+                        <div class="thoigian-noidungchinh4-1"><i class="bi bi-caret-right-fill red"></i> Trung vệ U22 Việt Nam tiết lộ vì sao HLV Troussier yêu cầu gắt</div>
+                    </div>
+                </div>  
+                </div>
+                <div class="nhanvao-noidungchinh4">VIEW MORE</div>
+            </div>
+        </div>
+        <!--lay7-->
+        <div class="tieudelay6">LATEST VIDEOS <i class="bi bi-play-btn-fill"></i></div>
+        <!--lay8-->
+        <div class="videotintuc">
+            <div class="videotintuc1">
+                <div class="anhvideo">
+                    <iframe width="1167" height="729" src="https://www.youtube.com/embed/_N35slMCBMw"  allowfullscreen></iframe>
+                </div>
+                <div class="text-lay6">Highlights Bayern Munich - Man City: Haaland kết liễu, bàn gỡ muộn màng (Champions League)</div> 
+            </div>
+            <div class="videotintuc2">
+                <div class="video-1">
+                    <div class="video-1-1">
+                        <iframe width="276" height="153" src="https://www.youtube.com/embed/VeMqKlNIb1I"  allowfullscreen></iframe>
+                    </div>
+                    <div class="noidungvideo">Highlights Chelsea - Real Madrid: Người hùng Brazil, "pháo đài" đổ sập (Cúp C1)
+                        <div class="thoigianvideo">5 hrs ago</div>
+                    </div>
+                </div>
+                <div class="video-1">
+                    <div class="video-1">
+                        <div class="video-1-2">
+                            <iframe width="276" height="153" src="https://www.youtube.com/embed/o_R10T59ZPg"  allowfullscreen></iframe>
+                        </div>
+                        <div class="noidungvideo">Highlights Napoli - AC Milan: Solo đỉnh cao, 2 quả phạt đền hỏng ăn (Cúp C1)
+                            <div class="thoigianvideo">3 hrs ago</div>
+                        </div>
+                    </div>
+                    <div class="noidungvideo"></div>
+                </div>
+                <div class="video-1">
+                    <div class="video-1">
+                        <div class="video-1-3">
+                            <iframe width="276" height="153" src="https://www.youtube.com/embed/xoULgVEZZNg"  allowfullscreen></iframe>
+                        </div>
+                        <div class="noidungvideo">Highlights Nottingham Forest - MU: 2 đòn kết liễu sắc sảo, "người nhện" bó tay (Ngoại hạng Anh)
+                            <div class="thoigianvideo">9 hrs ago</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-1">
+                    <div class="video-1">
+                        <div class="video-1-4">
+                            <iframe width="276" height="153" src="https://www.youtube.com/embed/H98k97LnN5I"  allowfullscreen></iframe>
+                        </div>
+                        <div class="noidungvideo">Highlights West Ham - Arsenal: 4 bàn kịch tính, ngôi đầu lung lay (Ngoại hạng Anh)
+                        <div class="thoigianvideo">7 hrs ago</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--lay 9-->
+        <div class="footer">
+            <div class="footer-1">
+                <div class="text-footer-1">Subscribe to get our latest news!</div>
+                <div class="sheach">
+                    <input type="text" id="sheach-1" name="sheach"> 
+                        <div  class="sheach-2" >JOIN!</div>
+                </div>
+            </div>
+            <div class="footer-2">
+                <img class="anh-footer-2" src="./img/logo2.png">
+                <div class="icon-footer">
+                    <a href="https://www.facebook.com/thesportingnews"  target="_blank">
+                        <div class="anh-footer-2-1">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill red="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.0001 0.560059C6.57726 0.560059 0.560059 6.57726 0.560059 14.0001C0.560059 21.4229 6.57726 27.4401 14.0001 27.4401C21.4229 27.4401 27.4401 21.4229 27.4401 14.0001C27.4401 6.57726 21.4229 0.560059 14.0001 0.560059ZM17.1837 9.84766H15.1635C14.9241 9.84766 14.6581 10.1627 14.6581 10.5813V12.0401H17.1851L16.8029 14.1205H14.6581V20.3659H12.2739V14.1205H10.1109V12.0401H12.2739V10.8165C12.2739 9.06086 13.4919 7.63426 15.1635 7.63426H17.1837V9.84766V9.84766Z" fill red="white"/>
+                            </svg>    
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/sportingnews/"   target="_blank">
+                        <div class="anh-footer-2-1">
+                            <svg width="28" height="28" viewBox="0 0 22 22" fill red="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.9999 5.39173C7.89637 5.39173 5.39168 7.89642 5.39168 10.9999C5.39168 14.1034 7.89637 16.6081 10.9999 16.6081C14.1034 16.6081 16.6081 14.1034 16.6081 10.9999C16.6081 7.89642 14.1034 5.39173 10.9999 5.39173ZM10.9999 14.6449C8.99285 14.6449 7.35496 13.007 7.35496 10.9999C7.35496 8.9929 8.99285 7.35501 10.9999 7.35501C13.0069 7.35501 14.6448 8.9929 14.6448 10.9999C14.6448 13.007 13.0069 14.6449 10.9999 14.6449ZM16.8378 3.85501C16.1132 3.85501 15.528 4.44017 15.528 5.16478C15.528 5.88939 16.1132 6.47454 16.8378 6.47454C17.5624 6.47454 18.1475 5.89212 18.1475 5.16478C18.1478 4.99272 18.114 4.8223 18.0483 4.6633C17.9825 4.50429 17.8861 4.35982 17.7644 4.23815C17.6427 4.11649 17.4983 4.02002 17.3393 3.95427C17.1803 3.88853 17.0098 3.8548 16.8378 3.85501V3.85501ZM21.9319 10.9999C21.9319 9.49056 21.9456 7.99486 21.8608 6.48822C21.7761 4.73822 21.3768 3.18509 20.0972 1.9054C18.8147 0.622981 17.2643 0.226497 15.5143 0.141731C14.005 0.0569656 12.5093 0.0706375 11.0026 0.0706375C9.49324 0.0706375 7.99754 0.0569656 6.4909 0.141731C4.7409 0.226497 3.18778 0.625716 1.90809 1.9054C0.625667 3.18782 0.229182 4.73822 0.144417 6.48822C0.0596512 7.99759 0.0733231 9.49329 0.0733231 10.9999C0.0733231 12.5066 0.0596512 14.005 0.144417 15.5117C0.229182 17.2617 0.628401 18.8148 1.90809 20.0945C3.19051 21.3769 4.7409 21.7734 6.4909 21.8581C8.00028 21.9429 9.49598 21.9292 11.0026 21.9292C12.512 21.9292 14.0077 21.9429 15.5143 21.8581C17.2643 21.7734 18.8175 21.3742 20.0972 20.0945C21.3796 18.812 21.7761 17.2617 21.8608 15.5117C21.9483 14.005 21.9319 12.5093 21.9319 10.9999V10.9999ZM19.5257 17.4476C19.3261 17.9452 19.0854 18.3171 18.6999 18.6999C18.3143 19.0855 17.9452 19.3261 17.4475 19.5257C16.0093 20.0972 12.594 19.9687 10.9999 19.9687C9.40574 19.9687 5.98778 20.0972 4.54949 19.5285C4.05184 19.3288 3.67996 19.0882 3.29715 18.7027C2.9116 18.3171 2.67098 17.948 2.47137 17.4503C1.90262 16.0093 2.03114 12.5941 2.03114 10.9999C2.03114 9.40579 1.90262 5.98782 2.47137 4.54954C2.67098 4.05189 2.9116 3.68001 3.29715 3.2972C3.6827 2.91439 4.05184 2.67103 4.54949 2.47142C5.98778 1.90267 9.40574 2.03118 10.9999 2.03118C12.594 2.03118 16.012 1.90267 17.4503 2.47142C17.9479 2.67103 18.3198 2.91165 18.7026 3.2972C19.0882 3.68275 19.3288 4.05189 19.5284 4.54954C20.0972 5.98782 19.9686 9.40579 19.9686 10.9999C19.9686 12.5941 20.0971 16.0093 19.5257 17.4476Z" fill red="white"/>
+                            </svg>   
+                        </div> 
+                    </a>
+                    <a href="https://twitter.com/sportingnews/?lang=de" target="_blank">
+                        <div class="anh-footer-2-1">
+                            <svg width="28" height="28" viewBox="0 0 26 26" fill red="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 0.75C6.23516 0.75 0.75 6.23516 0.75 13C0.75 19.7648 6.23516 25.25 13 25.25C19.7648 25.25 25.25 19.7648 25.25 13C25.25 6.23516 19.7648 0.75 13 0.75ZM18.8871 9.98398C18.8953 10.1125 18.8953 10.2465 18.8953 10.3777C18.8953 14.3918 15.8383 19.0156 10.252 19.0156C8.5293 19.0156 6.93242 18.5152 5.58711 17.6539C5.8332 17.6813 6.06836 17.6922 6.31992 17.6922C7.7418 17.6922 9.04883 17.2109 10.0906 16.3961C8.75625 16.3688 7.63516 15.4938 7.25234 14.2906C7.71992 14.359 8.14102 14.359 8.62227 14.2359C7.93519 14.0963 7.31763 13.7232 6.8745 13.1799C6.43137 12.6366 6.19 11.9566 6.19141 11.2555V11.2172C6.59336 11.4441 7.06641 11.5836 7.56133 11.6027C7.14527 11.3255 6.80406 10.9498 6.56796 10.5091C6.33186 10.0683 6.20815 9.57616 6.20781 9.07617C6.20781 8.51016 6.35547 7.99336 6.6207 7.54492C7.38333 8.48373 8.33497 9.25156 9.41377 9.7985C10.4926 10.3454 11.6744 10.6592 12.8824 10.7195C12.4531 8.65508 13.9953 6.98438 15.8492 6.98438C16.7242 6.98438 17.5117 7.35078 18.0668 7.94141C18.7531 7.81289 19.4094 7.55586 19.9945 7.21133C19.7676 7.91406 19.2918 8.50742 18.6602 8.88203C19.2727 8.81641 19.8633 8.64688 20.4102 8.40898C19.9973 9.01602 19.4805 9.55469 18.8871 9.98398V9.98398Z" fill red="white"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com/@sportingnews" target="_blank">     
+                        <div class="anh-footer-2-1">
+                            <svg width="28" height="28" viewBox="0 0 28 20" fill red="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M27.4167 3.59151C27.2581 3.02594 26.9493 2.51391 26.523 2.10984C26.0847 1.69334 25.5474 1.39542 24.962 1.24417C22.771 0.666674 13.993 0.666674 13.993 0.666674C10.3335 0.625039 6.67499 0.808161 3.03799 1.21501C2.45254 1.37742 1.91631 1.68201 1.47699 2.10167C1.04532 2.51701 0.732654 3.02917 0.569321 3.59034C0.176963 5.70404 -0.0136717 7.85024 -1.23748e-05 10C-0.0140124 12.1478 0.176154 14.2933 0.569321 16.4097C0.729154 16.9685 1.04065 17.4783 1.47349 17.8902C1.90632 18.302 2.44532 18.5995 3.03799 18.757C5.25815 19.3333 13.993 19.3333 13.993 19.3333C17.6571 19.375 21.3203 19.1919 24.962 18.785C25.5474 18.6338 26.0847 18.3358 26.523 17.9193C26.9491 17.5154 27.2576 17.0032 27.4155 16.4377C27.8181 14.3248 28.0138 12.1777 28 10.0268C28.0303 7.86688 27.8348 5.70967 27.4167 3.59034V3.59151ZM11.2023 13.9947V6.00651L18.5057 10.0012L11.2023 13.9947Z" fill red="white"/>
+                            </svg>      
+                        </div> 
+                    </a>
+                    <a href="https://www.tiktok.com/@thesportingnews"   target="_blank">
+                        <div class="anh-footer-2-1">
+                            <svg width="28" height="28" viewBox="0 0 24 28" fill red="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.5412 6.489C20.364 6.39735 20.1915 6.29689 20.0244 6.188C19.5387 5.86684 19.0933 5.48846 18.6979 5.061C17.7074 3.92817 17.3375 2.779 17.2022 1.97517H17.2069C17.0937 1.30667 17.1404 0.875 17.1485 0.875H12.6394V18.3085C12.6394 18.5418 12.6394 18.774 12.63 19.0027C12.63 19.0307 12.6265 19.0563 12.6254 19.0878C12.6254 19.0995 12.6254 19.1135 12.6219 19.1263V19.1368C12.5745 19.7622 12.3742 20.3663 12.0385 20.8961C11.7029 21.4258 11.2421 21.865 10.6969 22.1748C10.128 22.4984 9.48466 22.6681 8.83021 22.6672C6.73021 22.6672 5.02688 20.9545 5.02688 18.8393C5.02688 16.723 6.73021 15.0103 8.83021 15.0103C9.22805 15.0103 9.62354 15.0733 10.0015 15.197L10.0074 10.605C8.85939 10.4569 7.69317 10.5484 6.58232 10.8737C5.47148 11.199 4.44013 11.751 3.55338 12.495C2.77621 13.17 2.1228 13.9754 1.62255 14.875C1.43238 15.2028 0.713712 16.5223 0.627379 18.662C0.572545 19.8753 0.937712 21.1353 1.11155 21.6545V21.6662C1.22005 21.9718 1.64471 23.0172 2.33538 23.898C2.89234 24.605 3.5504 25.2261 4.28838 25.7413V25.7297L4.29888 25.7413C6.48055 27.223 8.90138 27.1262 8.90138 27.1262C9.32021 27.1087 10.7237 27.1262 12.3174 26.3713C14.0849 25.5337 15.0905 24.2865 15.0905 24.2865C15.7335 23.5411 16.2448 22.6917 16.6025 21.7747C17.0109 20.7013 17.1462 19.4157 17.1462 18.9023V9.65183C17.201 9.6845 17.9302 10.1663 17.9302 10.1663C17.9302 10.1663 18.9802 10.8395 20.617 11.277C21.7907 11.5885 23.3739 11.655 23.3739 11.655V7.1785C22.8197 7.23917 21.6939 7.06417 20.54 6.49017L20.5412 6.489Z" fill red="white"/>
+                            </svg>
+                        </div>  
+                    </a> 
+                </div>
+                <div class="text-footer-2">About Us
+                    <div class="text-footer-2-1">Contact Us</div>
+                    <div class="text-footer-2-1">Careers</div>
+                    <div class="text-footer-2-1">Privacy Policy</div>
+                </div>
+                <div class="text-footer-3">Copyright © 2022 Sporting News Holdings Limited. All rights reserved.</div>
+            </div>
+        </div> 
+        <!-- lay 10 -->
+        <div class="chuyentrang">
+            <nav aria-label="Page navigation example end ">
+                <ul class="pagination ">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item "><a class="page-link " href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+        <div id="chat-box" class="draggable">
+        <i class="bi bi-chat-dots-fill chat"> Phản hồi</i>
+        </div>
+        <div id="chat-window">
+        <div id="chat-header">
+          <h4>Tiếp Nhận Phản Hồi</h4>
+          <button id="close-button">&times;</button>
+        </div>
+        <div id="chat-content">
+          <!-- Nội dung chat -->
+        </div>
+        <div id="chat-footer">
+          <input type="text" id="feedback-input" placeholder="Nhập phản hồi...">
+          <button id="send-button">Gửi</button>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+    
